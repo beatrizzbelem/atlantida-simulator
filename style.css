@@ -1,5 +1,6 @@
 :root {
   --animalsSpeed: .3s;
+  /* --spots-color: white; */
 }
 body {
   margin: 0;
@@ -178,7 +179,7 @@ ul {
     
   border: 1px solid white;
   color: white;
-  color: transparent;
+  color: var(--spots-color, transparent);
 }
 
 .spots li[data-type="power"] {

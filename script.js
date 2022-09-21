@@ -1,9 +1,9 @@
 const players = [
   'shark',
-  'jelly',
   'octopus',
+  'snake',
   'orca',
-  // 'snake',
+  // 'jelly',
   // 'lion',
 ]
 
