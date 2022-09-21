@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+
+    
+    <!-- <div class="blast"></div> -->
+    <main class="board">
+
+      <img src="./board.jpg" alt="">
+
+      <div class="hud">
+        <div class="dado">
+          <i id="dado" class="dado--1"></i>
+        </div>
+        <ul class="players">
+          <li>
+            <i></i>
+            <div>
+              <span data-power="0">Power: 0</span>
+              <span data-defense-attack="0">Defense Attacks: 0</span>
+              <span data-defense-move="0">Defense Moves: 0</span>
+              <span data-total-attacks>Total Attacks: 0</span>
+              <span data-total-attacked>Total Attacked: 0</span>
+              <span data-total-attacks-defenses>Total Attacks Defenses: 0</span>
+              <span data-total-moves-defenses>Total Moves Defenses: 0</span>
+            </div>
+          </li>
+          <li>
+            <i></i>
+            <div>
+              <span data-power="0">Power: 0</span>
+              <span data-defense-attack="0">Defense Attacks: 0</span>
+              <span data-defense-move="0">Defense Moves: 0</span>
+              <span data-total-attacks>Total Attacks: 0</span>
+              <span data-total-attacked>Total Attacked: 0</span>
+              <span data-total-attacks-defenses>Total Attacks Defenses: 0</span>
+              <span data-total-moves-defenses>Total Moves Defenses: 0</span>
+            </div>
+          </li>
+          <li>
+            <i></i>
+            <div>
+              <span data-power="0">Power: 0</span>
+              <span data-defense-attack="0">Defense Attacks: 0</span>
+              <span data-defense-move="0">Defense Moves: 0</span>
+              <span data-total-attacks>Total Attacks: 0</span>
+              <span data-total-attacked>Total Attacked: 0</span>
+              <span data-total-attacks-defenses>Total Attacks Defenses: 0</span>
+              <span data-total-moves-defenses>Total Moves Defenses: 0</span>
+            </div>
+          </li>
+          <li>
+            <i></i>
+            <div>
+              <span data-power="0">Power: 0</span>
+              <span data-defense-attack="0">Defense Attacks: 0</span>
+              <span data-defense-move="0">Defense Moves: 0</span>
+              <span data-total-attacks>Total Attacks: 0</span>
+              <span data-total-attacked>Total Attacked: 0</span>
+              <span data-total-attacks-defenses>Total Attacks Defenses: 0</span>
+              <span data-total-moves-defenses>Total Moves Defenses: 0</span>
+            </div>
+          </li>
+        </ul>
+        <button class="start" onclick="next()">Start</button>
+      </div>
+
+      <ul class="animals">
+        <li style="--x: 50; --y: 150;"><i></i></li>
+        <li style="--x: 100; --y: 150;"><i></i></li>
+        <li style="--x: 50; --y: 200;"><i></i></li>
+        <li style="--x: 100; --y: 200;"><i></i></li>
+      </ul>
+
+      <!-- original -->
+      <!-- <ul class="spots">
+        <li data-x="20" data-y="27">0</li>
+        <li data-x="80" data-y="24">1</li>
+        <li data-x="140" data-y="27">2</li>
+        <li data-x="196" data-y="48" data-type="power">3</li>
+        <li data-x="237" data-y="91">4</li>
+        <li data-x="246" data-y="150" data-type="+2">5</li>
+        <li data-x="235" data-y="209">6</li>
+        <li data-x="208" data-y="262">7</li>
+        <li data-x="167" data-y="305">8</li>
+        <li data-x="121" data-y="344" data-type="-2">9</li>
+        <li data-x="81" data-y="389">10</li>
+        <li data-x="64" data-y="445" data-type="move">11</li>
+        <li data-x="85" data-y="504">12</li>
+        <li data-x="127" data-y="545">13</li>
+        <li data-x="182" data-y="563" data-type="+2">14</li>
+        <li data-x="239" data-y="547">15</li>
+        <li data-x="269" data-y="497">16</li>
+        <li data-x="285" data-y="439" data-type="defense">17</li>
+        <li data-x="280" data-y="380">18</li>
+        <li data-x="322" data-y="338" data-type="-3">19</li>
+        <li data-x="381" data-y="338">20</li>
+        <li data-x="437" data-y="359" data-type="move">21</li>
+        <li data-x="496" data-y="360">22</li>
+        <li data-x="548" data-y="331" data-type="power">23</li>
+        <li data-x="563" data-y="274">24</li>
+        <li data-x="542" data-y="218" data-type="defense">25</li>
+        <li data-x="509" data-y="169" data-type="+3">26</li>
+        <li data-x="513" data-y="111">27</li>
+        <li data-x="549" data-y="65" data-type="power">28</li>
+        <li data-x="599" data-y="33">29</li>
+        <li data-x="657" data-y="20">30</li>
+        <li data-x="717" data-y="19" data-type="-2">31</li>
+        <li data-x="776" data-y="26">32</li>
+        <li data-x="833" data-y="43" data-type="move">33</li>
+        <li data-x="883" data-y="74">34</li>
+        <li data-x="919" data-y="123">35</li>
+        <li data-x="933" data-y="181" data-type="+2">36</li>
+        <li data-x="930" data-y="241">37</li>
+        <li data-x="911" data-y="298">38</li>
+        <li data-x="880" data-y="349" data-type="defense">39</li>
+        <li data-x="835" data-y="389">40</li>
+        <li data-x="781" data-y="414" data-type="+2">41</li>
+        <li data-x="721" data-y="418">42</li>
+        <li data-x="662" data-y="425" data-type="power">43</li>
+        <li data-x="606" data-y="446">44</li>
+        <li data-x="559" data-y="483">45</li>
+        <li data-x="529" data-y="533">46</li>
+        <li data-x="547" data-y="590" data-type="-3">47</li>
+        <li data-x="606" data-y="600">48</li>
+        <li data-x="665" data-y="593">49</li>
+      </ul> -->
+
+      <!-- original -->
+      <ul class="spots">
+        <li data-x="20" data-y="27">0</li>
+        <li data-x="80" data-y="24">1</li>
+        <li data-x="140" data-y="27">2</li>
+        <li data-x="196" data-y="48" data-type="power">3</li>
+        <li data-x="237" data-y="91">4</li>
+        <li data-x="246" data-y="150" data-type="+2">5</li>
+        <li data-x="235" data-y="209">6</li>
+        <li data-x="208" data-y="262" data-type="defense">7</li>
+        <li data-x="167" data-y="305">8</li>
+        <li data-x="121" data-y="344" data-type="-2">9</li>
+        <li data-x="81" data-y="389">10</li>
+        <li data-x="64" data-y="445" data-type="move">11</li>
+        <li data-x="85" data-y="504">12</li>
+        <li data-x="127" data-y="545">13</li>
+        <li data-x="182" data-y="563" data-type="+3">14</li>
+        <li data-x="239" data-y="547">15</li>
+        <li data-x="269" data-y="497">16</li>
+        <li data-x="285" data-y="439" data-type="power">17</li>
+        <li data-x="280" data-y="380">18</li>
+        <li data-x="322" data-y="338" data-type="-2">19</li>
+        <li data-x="381" data-y="338">20</li>
+        <li data-x="437" data-y="359" data-type="move">21</li>
+        <li data-x="496" data-y="360">22</li>
+        <li data-x="548" data-y="331" data-type="power">23</li>
+        <li data-x="563" data-y="274">24</li>
+        <li data-x="542" data-y="218" data-type="defense">25</li>
+        <li data-x="509" data-y="169" data-type="+2">26</li>
+        <li data-x="513" data-y="111">27</li>
+        <li data-x="549" data-y="65" data-type="power">28</li>
+        <li data-x="599" data-y="33">29</li>
+        <li data-x="657" data-y="20">30</li>
+        <li data-x="717" data-y="19" data-type="-2">31</li>
+        <li data-x="776" data-y="26">32</li>
+        <li data-x="833" data-y="43" data-type="move">33</li>
+        <li data-x="883" data-y="74">34</li>
+        <li data-x="919" data-y="123">35</li>
+        <li data-x="933" data-y="181" data-type="+3">36</li>
+        <li data-x="930" data-y="241">37</li>
+        <li data-x="911" data-y="298">38</li>
+        <li data-x="880" data-y="349" data-type="defense">39</li>
+        <li data-x="835" data-y="389">40</li>
+        <li data-x="781" data-y="414" data-type="+2">41</li>
+        <li data-x="721" data-y="418">42</li>
+        <li data-x="662" data-y="425" data-type="power">43</li>
+        <li data-x="606" data-y="446">44</li>
+        <li data-x="559" data-y="483">45</li>
+        <li data-x="529" data-y="533">46</li>
+        <li data-x="547" data-y="590" data-type="-4">47</li>
+        <li data-x="606" data-y="600">48</li>
+        <li data-x="665" data-y="593">49</li>
+      </ul>
+    </main>
+
+    <audio id="auch">
+      <source src="/sfx/auch.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="quack">
+      <source src="/sfx/quack.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="power">
+      <source src="/sfx/power.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="beep">
+      <source src="/sfx/beep.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="drop">
+      <source src="/sfx/drop.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="fart">
+      <source src="/sfx/fart.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="burp">
+      <source src="/sfx/burp.mp3" type="audio/mpeg">
+    </audio>
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
